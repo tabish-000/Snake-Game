@@ -1,0 +1,67 @@
+/* Prevent scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Disable scrolling */
+    box-sizing: border-box; /* Include padding/borders in dimensions */
+    font-family: Arial, sans-serif; /* Optional: Set a base font */
+}
+
+
+#gameContainer {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    background: linear-gradient(135deg, #4a148c, #7b1fa2, #ad1457); /* Beautiful gradient */
+    background-size: 400% 400%; /* Smooth gradient movement */
+    animation: gradientAnimation 8s ease infinite; /* Animate background */
+}
+
+
+#gameBoard {
+    border: 8px solid rgba(255, 255, 255, 0.7); /* Light border with transparency */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect */
+    width: 90%; /* Responsive width */
+    max-width: 1000px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 4 / 3; /* Preserve 4:3 ratio */
+    background-color: #f5f5f5; /* Light background for the game board */
+    border-radius: 10px; /* Smooth corners */
+    display: block; /* Ensure proper alignment */
+}
+
+
+#scoreText {
+    font-family: "Permanent Marker", cursive;
+    font-size: 4vw; /* Scale font size with viewport width */
+    color: #fff; /* White text color */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Glow effect */
+    margin-bottom: 20px;
+}
+
+#resetBtn {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.5vw; /* Scale font size */
+    padding: 10px 20px; /* Add padding for a better look */
+    color: #fff; /* Button text color */
+    background: #7b1fa2; /* Button background color */
+    border: none;
+    border-radius: 25px; /* Smooth corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+#resetBtn:hover {
+    background: #ad1457; /* Slightly darker on hover */
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
